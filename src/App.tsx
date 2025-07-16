@@ -13,6 +13,7 @@ import { ContactPage } from "./routes/ContactPage";
 import { AboutPage } from "./routes/AboutPage";
 import { ServicesPage } from "./routes/ServicesPage";
 import { ComingSoonPage } from "./components/ComingSoonPage";
+import Prepare from "./routes/Prepare";
 
 export const App = () => {
   return (
@@ -41,6 +42,7 @@ export const App = () => {
             </ProtectedRoute>
           }
         >
+          <Route path="/prepare" element={<Prepare/>}/>
           <Route path="/generate" element={<Generate />}>
             <Route index element={<Dashboard />} />
             {/* create route */}
