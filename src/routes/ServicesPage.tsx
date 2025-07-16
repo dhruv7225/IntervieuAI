@@ -6,7 +6,7 @@ export const ServicesPage = () => {
       <Container>
         {/* Header */}
         <section className="my-16 text-center max-w-4xl mx-auto space-y-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500">
+          <h1 className="text-4xl md:text-5xl font-extrabold">
             Services Offered by the Platform
           </h1>
           <p className="text-muted-foreground text-base md:text-lg">
