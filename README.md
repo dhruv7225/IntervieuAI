@@ -47,6 +47,6 @@
 - User speaks their answers via mic (speech-to-text)
 - Gemini API provides feedback on those answers
 - Entire session (questions, answers, feedback) is saved to Firestore
-- Users can export the session to PDF
+- Users can generate topic wise questions and export the it with PDF
 
 ---
