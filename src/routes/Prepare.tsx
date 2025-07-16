@@ -80,31 +80,40 @@ Respond strictly with a JSON array and no additional text.
     };
 
     const exportToPDF = () => {
-        const doc = new jsPDF();
-        doc.setFontSize(14);
-        doc.text("Mock Interview Questions", 20, 20);
+  const doc = new jsPDF();
+  doc.setFontSize(14);
+  doc.text("Mock Interview Questions", 20, 20);
 
-        let y = 30;
-        results.forEach((item, index) => {
-            const question = `${index + 1}. Q: ${item.question}`;
-            const answer = `   A: ${item.answer}`;
+  let y = 30;
+  const lineHeight = 10;
+  const pageHeight = 297; // A4 height in mm
+  const marginBottom = 20;
 
-            doc.text(question, 20, y);
-            y += 10;
+  results.forEach((item, index) => {
+    const question = `${index + 1}. Q: ${item.question}`;
+    const answer = `A: ${item.answer}`;
 
-            // Break long answer into lines (automatically wraps text)
-            const splitAnswer = doc.splitTextToSize(answer, 170);
-            doc.text(splitAnswer, 20, y);
-            y += splitAnswer.length * 10;
+    const wrappedQuestion = doc.splitTextToSize(question, 170);
+    const wrappedAnswer = doc.splitTextToSize(answer, 170);
 
-            if (y > 270) {
-                doc.addPage();
-                y = 20;
-            }
-        });
+    const blockHeight =
+      (wrappedQuestion.length + wrappedAnswer.length) * lineHeight + 5;
 
-        doc.save("mock-interview-questions.pdf");
-    };
+    // 🔁 Check before printing: Will it overflow?
+    if (y + blockHeight > pageHeight - marginBottom) {
+      doc.addPage();
+      y = 20;
+    }
+
+    doc.text(wrappedQuestion, 20, y);
+    y += wrappedQuestion.length * lineHeight;
+
+    doc.text(wrappedAnswer, 20, y);
+    y += wrappedAnswer.length * lineHeight + 5;
+  });
+
+  doc.save("mock-interview-questions.pdf");
+};
 
 
     return (
