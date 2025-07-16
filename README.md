@@ -50,7 +50,6 @@
 - Users can generate topic wise questions and export the it with PDF
 
 ---
----
 
 ## 📸 Screenshots
 
@@ -58,6 +57,8 @@
 
 <img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 22 28 PM" src="https://github.com/user-attachments/assets/dad5bd1e-c05a-42c5-90f1-58aecdff1bb9" />
 
+### 📄 All Mock Interviews 
+<img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 30 08 PM" src="https://github.com/user-attachments/assets/2ab90e30-cecc-4344-b750-3f8a43eed6cb" />
 
 ### ⚙️ Prepare Interview Page
 <img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 30 45 PM" src="https://github.com/user-attachments/assets/928ac400-fa7a-4ed1-a4ac-c98b8bfcd00c" />
@@ -65,9 +66,6 @@
 ### 🎤 Answer with Speech + Feedback
 <img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 30 26 PM" src="https://github.com/user-attachments/assets/e95158e2-5034-4dbf-8458-c7ce443fab43" />
 
-### 📄 Exported PDF 
+### 📄 Generate Q&A and Export PDF
 <img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 29 50 PM" src="https://github.com/user-attachments/assets/56bd10c8-61c7-4998-8137-db894c7bc07a" />
-
-### 📄 All Mock Interviews 
-<img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 30 08 PM" src="https://github.com/user-attachments/assets/2ab90e30-cecc-4344-b750-3f8a43eed6cb" />
 
