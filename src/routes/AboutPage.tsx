@@ -10,7 +10,7 @@ export const AboutPage = () => {
         {/* Intro Section */}
         <section className="my-16 text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-indigo-500 to-purple-500">
+            <span className="text-black-700">
               About Us
             </span>
           </h1>
