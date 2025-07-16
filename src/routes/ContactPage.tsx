@@ -9,7 +9,7 @@ export const ContactPage = () => {
         {/* Header Section */}
         <section className="my-16 text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-500 to-pink-500">
+            <span className="text-black-700">
               Let's Connect
             </span>
           </h1>
