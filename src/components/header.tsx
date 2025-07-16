@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import { Container } from "./container";
-import { LogoContainer } from "./logo-container";
 import { MainRoutes } from "@/lib/helper";
 import { NavLink } from "react-router-dom";
 import { ProfileContainer } from "@/containers/profile-container";
@@ -17,12 +16,35 @@ export const Header = () => {
       <Container>
         <div className="flex items-center gap-4">
           {/* logo section */}
-          <LogoContainer />
+          <span className="text-xl font-bold mr-4 md:mr-20">IntervieuAi</span>
           {/* nvigation section */}
 
           <nav className="hidden md:flex items-center gap-3">
             <ul className="flex items-center gap-6">
-              {MainRoutes.map((route) => (
+
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/services"}
+              >
+                Services
+              </NavLink>
+              {userId && (
                 <NavLink
                   className={({ isActive }) =>
                     cn(
@@ -30,12 +52,13 @@ export const Header = () => {
                       isActive && "text-neutral-900 font-semibold"
                     )
                   }
-                  key={route.href}
-                  to={route.href}
+                  to={"/prepare"}
                 >
-                  {route.label}
+                  Prepare
                 </NavLink>
-              ))}
+              )
+
+              }
 
               {userId && (
                 <NavLink
@@ -50,6 +73,30 @@ export const Header = () => {
                   Take an Interview
                 </NavLink>
               )}
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/about"}
+              >
+                About Us
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/contact"}
+              >
+                Contact Us
+              </NavLink>
+              
+
             </ul>
           </nav>
 
