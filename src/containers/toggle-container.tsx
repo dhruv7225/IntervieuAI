@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { useAuth } from "@clerk/clerk-react";
 
-import { MainRoutes } from "@/lib/helper";
 import { cn } from "@/lib/utils";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -18,22 +17,18 @@ export const ToggleContainer = () => {
       <SheetContent>
         <nav>
           <ul className="flex flex-col items-start gap-8">
-            {MainRoutes.map((route) => (
-              <NavLink
-                className={({ isActive }) =>
-                  cn(
-                    "text-base text-neutral-600",
-                    isActive && "text-neutral-900 font-semibold"
-                  )
-                }
-                key={route.href}
-                to={route.href}
-              >
-                {route.label}
-              </NavLink>
-            ))}
 
-            {userId && (
+            <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
               <NavLink
                 className={({ isActive }) =>
                   cn(
@@ -41,9 +36,60 @@ export const ToggleContainer = () => {
                     isActive && "text-neutral-900 font-semibold"
                   )
                 }
-                to={"/generate"}
+                to={"/services"}
               >
-                Take an Interview
+                Services
+              </NavLink>
+              {userId && (
+                <NavLink
+                  className={({ isActive }) =>
+                    cn(
+                      "text-base text-neutral-600",
+                      isActive && "text-neutral-900 font-semibold"
+                    )
+                  }
+                  to={"/prepare"}
+                >
+                  Prepare
+                </NavLink>
+              )
+
+              }
+
+              {userId && (
+                <NavLink
+                  className={({ isActive }) =>
+                    cn(
+                      "text-base text-neutral-600",
+                      isActive && "text-neutral-900 font-semibold"
+                    )
+                  }
+                  to={"/generate"}
+                >
+                  Take an Interview
+                </NavLink>
+              )}
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/about"}
+              >
+                About Us
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  cn(
+                    "text-base text-neutral-600",
+                    isActive && "text-neutral-900 font-semibold"
+                  )
+                }
+                to={"/contact"}
+              >
+                Contact Us
               </NavLink>
             )}
           </ul>
