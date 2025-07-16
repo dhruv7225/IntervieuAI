@@ -50,3 +50,20 @@
 - Users can generate topic wise questions and export the it with PDF
 
 ---
+---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+![Home Page](<img width="1710" height="1107" alt="Screenshot 2025-07-16 at 10 22 28 PM" src="https://github.com/user-attachments/assets/dad5bd1e-c05a-42c5-90f1-58aecdff1bb9" />
+)
+
+### ⚙️ Prepare Interview Page
+![Prepare Page](https://i.imgur.com/YOUR_PREPARE_IMAGE.png)
+
+### 🎤 Answer with Speech + Feedback
+![Speech and Feedback](https://i.imgur.com/YOUR_SPEECH_IMAGE.png)
+
+### 📄 Exported PDF Sample
+![PDF Export](https://i.imgur.com/YOUR_PDF_IMAGE.png)
+
