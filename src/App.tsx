@@ -21,8 +21,8 @@ export const App = () => {
       <Routes>
         {/* public routes */}
 
-        <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/sign-in/*" element={<SignInPage />} />
+        <Route path="/sign-up/*" element={<SignUpPage />} />
 
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
